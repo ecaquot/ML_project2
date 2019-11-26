@@ -106,3 +106,9 @@ venv.bak/
 # others
 .DS_Store
 twitter-datasets/
+
+#data
+*.pkl
+*.csv
+*.txt
+*.npy
