@@ -32,18 +32,6 @@ Here are the instructions to reproduce our best predictions.
 ### Prerequesite
 You should download the pre-trained model available [here](https://storage.googleapis.com/bert_models/2018_10_18/uncased_L-12_H-768_A-12.zip). Unzip it and put the folder in __project_text_classification/bert/__ without changing the folder name (__uncased_L-12_H-768_A-12__).
 
-In order to successfully train the model, please make sure to have the following libraries (all of them can be installed with `pip`):
-* tensorflow **1.13.0rc1** (newer version won't work)
-* **transformers**
-* numpy
-* pandas
-* os
-* sklearn
-* torch
-* warnings
-* time
-* csv
-
 ### Execute
 Your current directory should be __project_text_classification/__ and you can execute `python run.py`. This will create a file __submission.csv__ which is our best predictions for each entry of the test set. It it composed of a serie of 1 and -1, where 1 means that we predict a positive smiley :) boson and -1 predict negative smiley :(.
 
