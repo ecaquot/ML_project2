@@ -48,9 +48,9 @@ print('Import data...')
 # 0 for bert, -1 for our prediction
 negative_tag = 0
 
-train_pos_df = pd.read_csv(train_pos_path, delimiter="\\n", header=None, names = ["tweets"], engine='python')[0:10]
+train_pos_df = pd.read_csv(train_pos_path, delimiter="\\n", header=None, names = ["tweets"], engine='python')
 train_pos_df["prediction"] = 1
-train_neg_df = pd.read_csv(train_neg_path, delimiter="\\n", header=None, names = ["tweets"], engine='python')[0:10]
+train_neg_df = pd.read_csv(train_neg_path, delimiter="\\n", header=None, names = ["tweets"], engine='python')
 train_neg_df["prediction"] = negative_tag
 
 # concatenate train positive and negative
@@ -95,7 +95,7 @@ dev_df_bert = pd.DataFrame({
 
 
 # for prediction
-df_test = pd.read_csv(test_data_path, sep='^([^,]+),', engine='python', header=None, names = ["index", "tweets"]).reset_index(drop=True)[0:10]
+df_test = pd.read_csv(test_data_path, sep='^([^,]+),', engine='python', header=None, names = ["index", "tweets"]).reset_index(drop=True)
 
 test_df_bert = pd.DataFrame({
     'id':df_test["index"],
