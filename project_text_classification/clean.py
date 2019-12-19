@@ -10,10 +10,6 @@ from keras_preprocessing import text
 
 from itertools import groupby
 
-from tqdm.autonotebook import tqdm
-
-pd.set_option('display.max_colwidth', -1)
-
 #load datasets
 pos_df = pd.read_csv("Datasets/twitter-datasets/train_pos_full.txt", delimiter="\\n", header=None,
                      names = ["tweets"], engine='python')
