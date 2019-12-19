@@ -21,7 +21,6 @@ from keras.layers import LSTM
 from keras.layers import SpatialDropout1D
 from keras.callbacks import EarlyStopping
 from keras.callbacks import ModelCheckpoint
-from matplotlib import pyplot
 from keras.models import load_model
 from keras_preprocessing import text
 
