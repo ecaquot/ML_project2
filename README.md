@@ -24,7 +24,7 @@ We also have 4 files used in one of our model (for GLoVe embedding), they are no
 You should run them in this order, it is explained in `models.py`.
 
 ## Data
-You can find the data on [Aicrowd] (https://www.aicrowd.com/challenges/epfl-ml-text-classification-2019/dataset_files).
+You can find the data on [Aicrowd](https://www.aicrowd.com/challenges/epfl-ml-text-classification-2019/dataset_files).
 Download the data, create a folder name __Datasets__ in __project_text_classification__ and place in it the folder __twitter-datasets__ obtained from unziping __twitter-datasets.zip__.
 
 You should have the folowing structure: __project_text_classification/Datasets/twitter-datasets/__, containing six files :
