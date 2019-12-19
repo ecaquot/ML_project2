@@ -12,9 +12,9 @@ The code is situated in the __project_text_classification__ folder, there are 3 
 - `models.py` The implementation of the other models that were not as efficient as the one in `run.py'
 - `clean.py` Function we defined to help us clean the data during this project
 
-The code relies on the follllowing libraires: **pandas**, **numpy**, **nltk**, **keras**, **sklearn**, **gensim**, **h5py**, **torch**, **transformers**, **tensorflow 1.13.0rc1** You can install them easily with `pip`.
+The code relies on the following libraires: **pandas**, **numpy**, **nltk**, **keras**, **sklearn**, **gensim**, **h5py**, **torch**, **transformers**, **tensorflow 1.13.0rc1** You can install them easily with `pip`.
 
-### Not best predictions
+### Other models
 We also have 5 files used in one of our model (for GLoVe embedding), they are not part of the best predictions but we upload them for completness. Those files are : 
 - `build_vocab.sh`
 - `cut_vocab.sh`
@@ -43,7 +43,7 @@ Here are the instructions to reproduce our best predictions.
 You should download the pre-trained model available [here](https://storage.googleapis.com/bert_models/2018_10_18/uncased_L-12_H-768_A-12.zip). Unzip it and put the folder in __project_text_classification/bert/__ without changing the folder name (__uncased_L-12_H-768_A-12__).
 
 ### Execute
-Your current directory should be __project_text_classification/__ and you can execute `python run.py`. This will create a file __submission.csv__ which is our best predictions for each entry of the test set. It it composed of a serie of 1 and -1, where 1 means that we predict a positive smiley :) boson and -1 predict negative smiley :(.
+Your current directory should be __project_text_classification/__ and you can execute `python run.py`. This will create a file __submission.csv__ which is our best predictions for each entry of the test set. It it composed of a serie of 1 and -1, where 1 means that we predict a positive smiley :) and -1 predict negative smiley :(.
 
 **DISCLAIMER: might take several hours even with a Nvidia P100**
 
