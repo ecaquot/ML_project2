@@ -12,6 +12,8 @@ The code is situated in the __project_text_classification__ folder, there are 3 
 - `models.py` The implementation of the other models that were not as efficient as the one in `run.py'
 - `clean.py` Function we defined to help us clean the data during this project
 
+The folder __bert__ contains [code](https://github.com/google-research/bert) to train bert model.
+
 The code relies on the following libraries: **pandas**, **numpy**, **nltk**, **keras**, **sklearn**, **gensim**, **h5py**, **torch**, **transformers**, **tensorflow 1.13.0rc1** You can install them easily with `pip`.
 
 ### Other models
