@@ -43,7 +43,7 @@ Here are the instructions to reproduce our best predictions.
 You should download the pre-trained model available [here](https://storage.googleapis.com/bert_models/2018_10_18/uncased_L-12_H-768_A-12.zip). Unzip it and put the folder in __project_text_classification/bert/__ without changing the folder name (__uncased_L-12_H-768_A-12__).
 
 ### Execute
-Your current directory should be __project_text_classification/__ and you can execute `python run.py`. This will create a file __submission.csv__ which is our best predictions for each entry of the test set. It it composed of a serie of 1 and -1, where 1 means that we predict a positive smiley :) and -1 predict negative smiley :(.
+Your current directory should be __project_text_classification/__ and you can execute `python run.py`. This will create a file `submission.csv` which is our best predictions for each entry of the test set. It it composed of a serie of 1 and -1, where 1 means that we predict a positive smiley :) and -1 predict negative smiley :(.
 
 **DISCLAIMER: might take several hours even with a Nvidia P100**
 
