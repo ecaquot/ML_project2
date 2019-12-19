@@ -4,7 +4,7 @@ Project 2 EPFL Machine Learning Course, Fall 2019
 # Prerequesite
 Your current directory should be __project_text_classification/__ and you can execute __run.py__ (**python run.py**).
 
-You should download and put in __project_text_classification/bert/__, the pre-trained model available [here](https://storage.googleapis.com/bert_models/2018_10_18/uncased_L-12_H-768_A-12.zip). Unzip it and put the folder in the above directory without changing the folder name (__uncased_L-12_H-768_A-12__).
+You should download the pre-trained model available [here](https://storage.googleapis.com/bert_models/2018_10_18/uncased_L-12_H-768_A-12.zip). Unzip it and put the folder in __project_text_classification/bert/__without changing the folder name (__uncased_L-12_H-768_A-12__).
 
 **twitter-datasets** should be unzipped and put the 3 files in __project_text_classification/Datasets/twitter-datasets/__
 
