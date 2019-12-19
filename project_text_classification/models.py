@@ -264,3 +264,7 @@ def LSTM(positive_tweets,negative_tweets):
     saved_model = load_model('best_model.h5')
 
     return saved_model
+
+''' ---------- BERT ----------
+the code is in run.py and the folder /bert
+'''
