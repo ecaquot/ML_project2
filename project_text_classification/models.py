@@ -28,11 +28,14 @@ from keras_preprocessing import text
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 ''' ---------- Logistic Regression and GloVe ---------- 
-First run the scripts
+First run the scripts (details on how to run .sh inside them)
  - build_vocab.sh
  - cut_vocab.sh
  - python3 pickle_vocab.py
- - python3 cooc.py '''
+ - python3 cooc.py 
+ - python3 glove_solution.py
+
+ Now use can use the GloVe embedding'''
 
 def logistic_regression_glove(positive_tweets,negative_tweets):
     """ Return a logistic Regression model fitted on GloVe embeddings
