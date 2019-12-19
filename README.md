@@ -1,5 +1,5 @@
 # ML_project2
-Project 2 EPFL Machine Learning Course, Fall 2019
+This project was realized during the class of Machine learning in the semester of Autumn 2019 at EPFL. It aims at classifying tweets that used to contain a positive :) smiley or a negative :( smiley.
 
 ## Members
 * [**Jeanne CHAVEROT**](jeanne.chaverot@epfl.ch)
@@ -43,9 +43,9 @@ Here are the instructions to reproduce our best predictions.
 You should download the pre-trained model available [here](https://storage.googleapis.com/bert_models/2018_10_18/uncased_L-12_H-768_A-12.zip). Unzip it and put the folder in __project_text_classification/bert/__ without changing the folder name (__uncased_L-12_H-768_A-12__).
 
 ### Execute
-Your current directory should be __project_text_classification/__ and you can execute `python run.py`. This will create a file `submission.csv` which is our best predictions for each entry of the test set. It it composed of a serie of 1 and -1, where 1 means that we predict a positive smiley :) and -1 predict negative smiley :(.
+Your current directory should be __project_text_classification/__ and you can execute `python run.py`. This will create a file `submission.csv` which is our best predictions for each entry of the test set. It is composed of a series of 1 and -1, where 1 means that we predict a positive smiley :) and -1 predict negative smiley :(.
 
-**DISCLAIMER: might take several hours even with a Nvidia P100**
+**DISCLAIMER: might take several hours even with an Nvidia P100**
 
 ## Report
 You can find a detailed explanation of our work in **report.pdf**
