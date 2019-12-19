@@ -25,6 +25,11 @@ pos_df['label'] = 1
 neg_df['label'] = 0
 
 def preprocess(df):
+    """ Retrun a DataFrame where numbers, <users>, <url>, and punctuation has been removed
+
+    Keyword arguments:
+    df -- a DataFrame with one colums the text of the tweet, each row is a tweet.
+    """
 
     #remove numbers
     df.tweets = df.tweets.str.replace('\d+', '')
@@ -39,6 +44,16 @@ def preprocess(df):
 
 #we have run this setting pct = 80 as it is the percentage providing the best accuracy
 def change_most_common_terms(pos_df, neg_df, test_df, pct):
+    """ Retrun DataFrames where the most common terms of the postive DataFrame are replaced by happy 
+    and the most common terms of the negative DataFrame are replaced by sad. Terms are replaced if there appear 'pct'
+    in a DataFrame over the total.
+
+    Keyword arguments:
+    pos_df -- a DataFrame with one colums the text of the tweet, each row is a positive tweet.
+    neg_df -- a DataFrame with one colums the text of the tweet, each row is a negative tweet.
+    test_df -- a DataFrame with one colums the text of the tweet, each row is a test tweet.
+    pct -- percentage to threshold
+    """
 
     results_pos = Counter()
     pos_df.tweets.str.lower().str.split().apply(results_pos.update)
@@ -78,20 +93,28 @@ def change_most_common_terms(pos_df, neg_df, test_df, pct):
     return pos_df, neg_df, test_df
 
     #we have run this using nb = 5
-    def delete_least_common_terms(pos_df, neg_df, test_df, nb):
-        results_pos = Counter()
-        pos_df.tweets.str.lower().str.split().apply(results_pos.update)
-        results_neg = Counter()
-        neg_df.tweets.str.lower().str.split().apply(results_neg.update)
+def delete_least_common_terms(pos_df, neg_df, test_df, nb):
+    """ Retrun DataFrames where the word that appears less than 'nb' time are deleted.
 
-        results = results_pos + results_neg
-        results = list(results.items())
+    Keyword arguments:
+    pos_df -- a DataFrame with one colums the text of the tweet, each row is a positive tweet.
+    neg_df -- a DataFrame with one colums the text of the tweet, each row is a negative tweet.
+    test_df -- a DataFrame with one colums the text of the tweet, each row is a test tweet.
+    nb -- minimun appearance to keep word
+    """
+    results_pos = Counter()
+    pos_df.tweets.str.lower().str.split().apply(results_pos.update)
+    results_neg = Counter()
+    neg_df.tweets.str.lower().str.split().apply(results_neg.update)
 
-        #keep all words that appear at most `nb` times in the training (positive + negative) set
-        least_common = [t[0] for t in results if t[1] < (nb + 1)]
+    results = results_pos + results_neg
+    results = list(results.items())
 
-        pos_df.tweets = pos_df.tweets.apply(lambda tweet:" ".join(word for word in tweet.split(" ") if not word in stop_words))
-        neg_df.tweets = neg_df.tweets.apply(lambda tweet:" ".join(word for word in tweet.split(" ") if not word in stop_words))
-        test_df.tweets = test_df.tweets.apply(lambda tweet:" ".join(word for word in tweet.split(" ") if not word in stop_words))
+    #keep all words that appear at most `nb` times in the training (positive + negative) set
+    least_common = [t[0] for t in results if t[1] < (nb + 1)]
 
-        return pos_df, neg_df, test_df
+    pos_df.tweets = pos_df.tweets.apply(lambda tweet:" ".join(word for word in tweet.split(" ") if not word in least_common))
+    neg_df.tweets = neg_df.tweets.apply(lambda tweet:" ".join(word for word in tweet.split(" ") if not word in least_common))
+    test_df.tweets = test_df.tweets.apply(lambda tweet:" ".join(word for word in tweet.split(" ") if not word in least_common))
+
+    return pos_df, neg_df, test_df
