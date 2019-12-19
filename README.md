@@ -14,7 +14,7 @@ The code is situated in the __project_text_classification__ folder, there are 3 
 
 The code relies on the following libraries: **pandas**, **numpy**, **nltk**, **keras**, **sklearn**, **gensim**, **h5py**, **torch**, **transformers**, **tensorflow 1.13.0rc1** You can install them easily with `pip`.
 
-### Not best predictions
+### Other models
 We also have 5 files used in one of our models (for GLoVe embedding), they are not part of the best predictions but we upload them for completeness. Those files are :
 - `build_vocab.sh`
 - `cut_vocab.sh`
