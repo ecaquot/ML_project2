@@ -7,12 +7,21 @@ Project 2 EPFL Machine Learning Course, Fall 2019
 * [**Aslam CADER**](aslam.cader@epfl.ch)
 
 ## Code
-The code is situated in the __project_text_classification__ folder, there are 3 python files (.py) :
+The code is situated in the __project_text_classification__ folder, there are 3 main python files (.py) :
 - `run.py` The main file that contains our best model and will produce the best predictions we could get.
 - `models.py` The implementation of the other models that were not as efficient as the one in `run.py'
 - `clean.py` Function we defined to help us clean the data during this project
 
 The code relies on the follllowing libraires: **pandas**, **numpy**, **nltk**, **keras**, **sklearn**, **gensim**, **h5py**, **torch**, **transformers**, **tensorflow 1.13.0rc1** You can install them easily with `pip`.
+
+### Not best predictions
+We also have 4 files used in one of our model (GLoVe embedding, they are not part of the best predictions but we upload them for completness. Those files are : 
+- `build_vocab.sh`
+- `cut_vocab.sh`
+- `pickle_vocab.py`
+- `cooc.py`
+
+You should run them in this order, it is explained in `models.py`.
 
 ## Data
 You can find the data on [Aicrowd] (https://www.aicrowd.com/challenges/epfl-ml-text-classification-2019/dataset_files).
